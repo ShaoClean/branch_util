@@ -1,7 +1,6 @@
 const { exec, cd } = require('shelljs');
 const fs = require('fs');
 const path = require('path');
-// const config = require('../config');
 const clc = require('cli-color');
 const { Command } = require('commander');
 const program = new Command();
@@ -9,15 +8,9 @@ const getConfig = require('./repository');
 
 const pre = 'mt_';
 
-// const nodeAppName = config.nodeAppList.map(appItem => appItem.name);
-// const pyAppName = Reflect.ownKeys(config.PythonList);
-// const toolsAppName = Reflect.ownKeys(config.toolsList);
-// const extraAppName = ['coconut', 'user_set', 'language', 'paper_tools_node', 'config_discovery', 'mt_fe'];
-
 const configFileName = 'branch.config.json';
 const configPath = path.resolve(path.join(__dirname, '..', configFileName));
 console.log('configPath', configPath);
-// /Users/clean/Desktop/scz/project
 
 // exec(`chcp 65001`);
 

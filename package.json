@@ -4,11 +4,10 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "node src/index.js",
-    "prettier":"prettier"
+    "dev": "node src/index.js"
   },
   "bin": {
-    "branch": "src/index.js"
+    "branch": "bin/index.js"
   },
   "keywords": [],
   "author": "ShaoClean",

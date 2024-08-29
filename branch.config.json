@@ -1,19 +1,19 @@
 {
   "repolist": [
-    "CYou",
-    "apple",
-    "clean-vite-cli",
-    "crm",
-    "crm-admin",
-    "crm2.0-fronted",
-    "cyou-js",
-    "mt_father_backend",
-    "mt_packing",
-    "my-login",
-    "nest",
-    "pkg_test",
-    "queue",
-    "rabbit"
+    "coconut",
+    "config_discovery",
+    "language",
+    "mt_batch_shape",
+    "mt_fe",
+    "mt_main_procedure",
+    "mt_py_server",
+    "mt_server",
+    "mt_sql_structure",
+    "mt_tmt",
+    "mt_tools",
+    "paper_tools_node",
+    "r_queue_task_makager",
+    "user_set"
   ],
-  "rootPath": "/Users/clean/Desktop/scz/project"
+  "rootPath": "D:\\workspace"
 }
