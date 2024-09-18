@@ -73,20 +73,23 @@ program
 program
     .command('ca')
     .description('切换所有分支 checkout all')
-    .option('-o, --origin <string>', '原分支名称')
-    .option('-n, --new <string>', '新分支名称')
-    // .argument('<string>', 'string to split')
+    .argument('<string>', '新分支名称')
+    // .option('-o, --origin <string>', '原分支名称')
+    // .option('-t, --targetBranch <string>', '新分支名称')
     // .option('--first', 'display just the first substring')
     .action(option => {
-        console.log(option);
+        console.log('targetBranch:', option);
+        const { repolist: allRepositoryName, rootPath } = getConfig(configPath);
         for (const appName of allRepositoryName) {
-            const appFullPath = path.resolve(path.join(process.cwd(), '..', appName));
+            const appFullPath = path.resolve(rootPath, appName);
             console.log(clc.magentaBright(`------------${appName} start------------`));
             console.log(clc.greenBright(`repository path : ${appFullPath}`));
             if (!fs.existsSync(appFullPath)) {
                 throw new Error('dir is not exsit : ', appName);
             }
-            run(appFullPath, option.origin, option.new);
+            cd(appFullPath);
+            exec(`git checkout ${option}`);
+            exec(`git pull`);
             console.log(clc.magentaBright(`------------${appName} end------------`));
             console.log('\r');
             console.log('\r');
