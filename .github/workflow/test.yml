@@ -1,0 +1,15 @@
+name: My Workflow
+on: push
+
+jobs:
+    build_job:
+        name: Build Job 1
+        runs-on: windows-latest
+        steps:
+            - name: run test scripts
+              env:
+                  MY_VAR: Hi there! My name is
+                  FIRST_NAME: Mona
+                  MIDDLE_NAME: The
+                  LAST_NAME: Octocat
+              run: node ./scripts/test.js
