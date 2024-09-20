@@ -4,7 +4,6 @@ on: push
 defaults:
     run:
         shell: pwsh
-        working-directory: ../../
 
 jobs:
     build_job:
@@ -17,4 +16,4 @@ jobs:
                   FIRST_NAME: Mona
                   MIDDLE_NAME: The
                   LAST_NAME: Octocat
-              run: node ./scripts/test.js
+              run: node .\scripts\test.js
