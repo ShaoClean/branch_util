@@ -1,7 +1,7 @@
 name: My Workflow
 on: push
 
-default:
+defaults:
     run:
         shell: pwsh
         working-directory: ../../
