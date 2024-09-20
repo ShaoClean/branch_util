@@ -1,6 +1,11 @@
 name: My Workflow
 on: push
 
+default:
+    run:
+        shell: pwsh
+        working-directory: ../../
+
 jobs:
     build_job:
         name: Build Job 1
