@@ -10,6 +10,8 @@ jobs:
         name: Build Job 1
         runs-on: windows-latest
         steps:
+            - name: checkout
+              uses: actions/checkout@v4
             - name: run test scripts
               env:
                   MY_VAR: Hi there! My name is
